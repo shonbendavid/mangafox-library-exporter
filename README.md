@@ -1,45 +1,39 @@
-# My Python Project
+# MangaDex Backup Tool
 
-## Overview
-This project is a Python application that implements core functionality through various functions and classes. It is structured to facilitate easy testing and maintenance.
+A lightweight Windows desktop application built with Python that logs into MangaDex, syncs your library, and stores it locally for backup and export.
 
-## Project Structure
-```
-my-python-project
-├── src
-│   └── main.py        # Entry point of the application
-├── tests
-│   └── test_main.py   # Unit tests for the application
-├── requirements.txt    # Project dependencies
-└── README.md           # Project documentation
-```
+---
 
-## Setup Instructions
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd my-python-project
-   ```
+## ✨ Features
 
-2. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+- 🔐 Login with MangaDex username & password
+- 📚 Sync followed manga library
+- 🗄 Store data locally in SQLite
+- 📤 Export library to JSON
+- 📊 Export library to CSV
+- 🔄 Update existing manga entries automatically
+- ⚡ Simple desktop UI (PySide6)
+- 🔁 Retry-safe API requests
 
-## Running the Application
-To run the application, execute the following command:
-```
-python src/main.py
-```
+---
 
-## Running Tests
-To run the unit tests, use the following command:
-```
-python -m unittest discover -s tests
-```
+## 🧱 Project Structure
 
-## Contributing
-Contributions are welcome! Please submit a pull request or open an issue for any suggestions or improvements.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+```text
+mangadex_backup/
+│
+├── app.py
+├── requirements.txt
+│
+├── src/
+│   ├── auth/
+│   ├── api/
+│   ├── database/
+│   ├── sync/
+│   ├── backup/
+│   ├── ui/
+│   └── core/
+│
+├── data/
+├── backups/
+└── tests/
