@@ -1,11 +1,9 @@
-import unittest
-from src.main import your_function  # Replace 'your_function' with the actual function you want to test
+import pytest
+from mangadex_scrapper.scraper import fetch_titles
 
-class TestMain(unittest.TestCase):
-
-    def test_your_function(self):
-        # Replace with actual test cases
-        self.assertEqual(your_function(args), expected_result)
-
-if __name__ == '__main__':
-    unittest.main()
+@pytest.mark.asyncio
+async def test_fetch_titles():
+    results = fetch_titles("naruto", limit=3)
+    assert isinstance(results, list)
+    assert len(results) == 3
+    assert results[0].startswith("naruto")
