@@ -1,0 +1,14 @@
+PySide6
+httpx[http2]
+beautifulsoup4
+lxml
+click
+pyinstaller
+pytest
+pytest-asyncio
+aiofiles
+requests
+sqlalchemy
+pandas
+keyring
+tenacity
